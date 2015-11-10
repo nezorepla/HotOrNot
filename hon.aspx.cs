@@ -154,14 +154,7 @@ SELECT    a.intcode,a.sicil,a.isim ,convert(float,count(b.vote)) as oyadet,conve
        //DataTable dt2 = PCL.Oracle_DBOperations.GetData(sql2, "EDWConn", cEDWUserId, cEDWPassword);
 
 
-        if (USER == "A25318" || USER == "A13916"
-            || USER == "A45398"
-            || USER == "A30683"
-            || USER == "A46619"
-            || USER == "A19156"
-            || USER == "A36596"
-            || USER == "A38427"
-            || USER == "A46614"
+        if (USER ==  USER  
             )
         {
             return true;
@@ -225,7 +218,7 @@ SELECT    a.intcode,a.sicil,a.isim ,convert(float,count(b.vote)) as oyadet,conve
         {
             foreach (DataRow dr in dt.Rows)
             {
-                ana += "<tr><td>" + x.ToString() + "</td><td><span class=\"top_" + x + "\"   id=\"" + dr["intcode"] + "\"> <img title=\"" + dr["sicil"] + "\" height=\"50%\" width=\"50%\" src=\"http://profil.bizcemumkun/User%20Photos/Profil%20Resimleri/000" + dr["sicil"].ToString().Substring(1, 5) + "_LThumb.jpg\"> </span></td><td>" + dr["isim"] + " </td><td>" + PCL.Utility.DBtoMT.ToDouble(dr["raiting"])  + " </td></tr>";
+                ana += "<tr><td>" + x.ToString() + "</td><td><span class=\"top_" + x + "\"   id=\"" + dr["intcode"] + "\"> <img title=\"" + dr["sicil"] + "\" height=\"50%\" width=\"50%\" src=\"Resimleri/000" + dr["sicil"].ToString().Substring(1, 5) + "_LThumb.jpg\"> </span></td><td>" + dr["isim"] + " </td><td>" + PCL.Utility.DBtoMT.ToDouble(dr["raiting"])  + " </td></tr>";
 
                 x++;
             }
@@ -239,13 +232,8 @@ SELECT    a.intcode,a.sicil,a.isim ,convert(float,count(b.vote)) as oyadet,conve
 
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
-        //if (USER == "A25318" || USER == "A11267" || USER == "A15894" || USER == "A06579" || USER == "A01606" || USER == "A19156" || USER == "A30683")
-        //{
-        //    ImportArea.Visible = true;
-        //}
-        //else
-        //{
+   
         Page.ClientScript.RegisterStartupScript(typeof(Page), "msgseysi", "alert('DAHA DEGIL!')", true);
-        //}
+ 
     }
 }
